@@ -18,7 +18,6 @@ A modern portfolio website built with React and Three.js, featuring interactive 
 - React.js
 - Three.js
 - React Three Fiber & Drei
-- Framer Motion
 - Styled Components
 - React Router DOM
 
@@ -34,7 +33,6 @@ A modern portfolio website built with React and Three.js, featuring interactive 
 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/portfolio.git
-cd portfolio
 ```
 
 2. Install dependencies
@@ -56,65 +54,26 @@ yarn start
 ## Project Structure
 
 ```
-portfolio/
+portfolio_web/
 ├── public/
-│   ├── tech/           # Technology icons for 3D balls
-│   └── desktop_pc/     # 3D model assets
 ├── src/
-│   ├── assets/         # Static assets 
-│   ├── components/     # Reusable components
-│   │   ├── canvas/     # Three.js 3D components
-│   │   └── layout/     # Layout components (Navbar, Footer, etc.)
-│   ├── pages/          # Page components
-│   ├── sections/       # Section components for pages
-│   └── utils/          # Utility functions
+│   ├── main.css
+│   ├── App.js
+│   ├── index.js
+│   ├── reportWebVitals.js
+│   ├── components/
+│   │   ├── layout/
+│   │   │   └── Navbar.js
+│   │   └── canvas/
+│   │       └── Stars.js
+│   └── pages/
+│       ├── About.js
+│       ├── Skills.js
+│       ├── Home.js
+│       ├── Projects.js
+│       └── Contact.js
 ```
 
-## Customization
 
-### Add Your Projects
 
-Edit the `projects` array in `src/pages/Projects.js` to add your own projects:
 
-```jsx
-const projects = [
-  {
-    title: "Project Name",
-    description: "Project description",
-    image: "path/to/image.jpg",
-    tags: ["Tag1", "Tag2", "Tag3"],
-    source: "https://github.com/yourrepo",
-    demo: "https://demo.example.com/"
-  },
-  // Add more projects
-];
-```
-
-### Change Personal Information
-
-Update your personal information in each page component.
-
-### Modify 3D Models
-
-For optimal performance, it's recommended to use optimized 3D models. You can replace the existing models in the `public` directory with your own.
-
-## Deployment
-
-Build the project for production:
-
-```bash
-npm run build
-# or
-yarn build
-```
-
-The build artifacts will be stored in the `build/` directory, ready to be deployed.
-
-## Credits
-
-- 3D model inspiration: Three.js Journey by Bruno Simon
-- Design inspiration: Modern portfolio websites
-
-## License
-
-MIT License
