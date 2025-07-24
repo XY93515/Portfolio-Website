@@ -136,8 +136,6 @@ export const Home = () => {
         <div className="hero-sparkle hero-sparkle6" />
         <div className="hero-sparkle hero-sparkle7" />
         <div className="hero-sparkle hero-sparkle8" />
-        {/* ...and so on for all decorative elements, each with a className */}
-        {/* For all the small animated dots, use className like 'hero-dot hero-dot1', etc. */}
       </div>
     </section>
   );

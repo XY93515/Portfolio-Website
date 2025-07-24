@@ -57,7 +57,7 @@ export const About = () => {
           </div>
           <div className="about-content">
             <p className="about-text">
-              Passionate full-stack developer with a passion for building dynamic and impactful web experiences. Whether it's frontend or backend, I enjoy tackling challenges with clean, efficient code. I'm constantly seeking opportunities to learn and grow. Outside of work, I enjoy exploring new ideas and nurturing my curiosity. I believe in living a balanced life and waking up each day with the motivation to make a meaningful impact.
+            Enthusiastic full-stack developer dedicated to creating dynamic and meaningful web experiences. I thrive on solving problems across both frontend and backend with clean, efficient code. Always eager to learn and improve, I embrace every opportunity for growth. Beyond work, I love exploring new concepts and feeding my curiosity. I value balance in life and start each day driven to make a positive impact.
             </p>
             <div className="about-cta">
               <a

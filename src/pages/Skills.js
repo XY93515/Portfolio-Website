@@ -2,23 +2,25 @@ import React from 'react';
 import { motion} from 'framer-motion';
 import StarsCanvas from '../components/canvas/Stars';
 import '../main.css';
+import { SiGo, SiDjango, SiJavascript, SiMongodb } from 'react-icons/si';
+import { FaNodeJs, FaPython } from 'react-icons/fa';
 
 const skillIcons = {
-  'Javascript': '🟨',
+  'Javascript': <SiJavascript style={{ color: '#F7DF1E' }} />, // JS yellow
   'React': '⚛️',
   'Redux': '🔄',
   'three.js': '🌐',
   'Webpack/Gulp/Grunt': '🛠️',
-  'Golang': '🐹',
-  'Node.js': '🌳',
-  'Python/Django': '🐍',
+  'Golang': <SiGo style={{ color: '#00ADD8' }} />, // Go official blue
+  'Node.js': <FaNodeJs style={{ color: '#3C873A' }} />, // Node.js green
+  'Python/Django': <><FaPython style={{ color: '#3776AB', marginRight: 2 }} /><SiDjango style={{ color: '#092E20' }} /></>, // Python blue + Django green
   'PostgresSQL/MySQL': '🗄️',
-  'MongoDB': '🍃',
-  'Git/Github': '📂',
-  'Docker': '🐳',
-  'Jenkins': '🔄',
+  'MongoDB': <SiMongodb style={{ color: '#47A248' }} />, // MongoDB green
   'AWS': '☁️',
-  'Google Cloud': '☁️',
+  'Agentic AI': '🤖',
+  'LLMs': '🧠',
+  'LangChain': '🔗',
+  'LangGraph': '📊',
 };
 
 const skillsData = [
@@ -52,16 +54,16 @@ const skillsData = [
   },
   {
     title: 'Others',
-    icon: '🛠️',
+    icon: '🤖',
     iconBg: '#804dee',
     // cardBg: 'rgba(230, 220, 250, 0.08)',
     titleColor: '#9b51e0',
     skills: [
-      { name: 'Git/Github', percent: 90},
-      { name: 'Docker', percent: 80 },
-      { name: 'Jenkins', percent: 85 },
-      { name: 'AWS', percent: 80 },
-      { name: 'Google Cloud', percent: 70 },
+      { name: 'Agentic AI', percent: 90 },
+      { name: 'LLMs', percent: 80 },
+      { name: 'LangChain', percent: 80 },
+      { name: 'LangGraph', percent: 80 },
+      { name: 'AWS', percent: 70 },
     ],
   },
 ];
