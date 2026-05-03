@@ -3,11 +3,9 @@ import { motion } from 'framer-motion';
 import StarsCanvas from '../components/canvas/Stars';
 import '../main.css';
 import {
-  SiGo, SiJavascript, SiMongodb, SiTypescript, SiReact, SiNextdotjs,
-  SiRedux, SiThreedotjs, SiFramer, SiWebpack, SiVite,
-  SiFastapi, SiPostgresql, SiSqlite, SiAmazon, SiGithub, SiGit
+  SiGo, SiTypescript, SiReact, SiRedux, SiThreedotjs, SiVite,
+  SiFastapi, SiPostgresql, SiSqlite, SiAmazon, SiGithub
 } from 'react-icons/si';
-import { FaNodeJs, FaPython } from 'react-icons/fa';
 
 const skillIcons = {
   'Javascript/TypeScript': <SiTypescript style={{ color: '#3178C6' }} />,

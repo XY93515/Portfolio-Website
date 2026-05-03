@@ -55,8 +55,9 @@ function useInView(threshold = 0.1) {
       ([e]) => { if (e.isIntersecting) setVisible(true); },
       { threshold }
     );
-    if (ref.current) obs.observe(ref.current);
-    return () => { if (ref.current) obs.unobserve(ref.current); };
+    const currentRef = ref.current;
+    if (currentRef) obs.observe(currentRef);
+    return () => { if (currentRef) obs.unobserve(currentRef); };
   }, [threshold]);
   return [ref, visible];
 }
