@@ -42,7 +42,7 @@ export const About = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <div className="about-image-container">
-            <img src="/profile.jpeg" alt="Paridhi Gupta" className="about-profile-img" />
+            <img src="/Profile.png" alt="Paridhi Gupta" className="about-profile-img" />
           </div>
           <div className="about-content">
             <p className="about-text">
