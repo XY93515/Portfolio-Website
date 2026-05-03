@@ -124,6 +124,10 @@ export const Home = () => {
       </motion.div>
       <div className="hero-bg-gradient" />
       <div className="hero-semicircle-globe">
+        <div className="hero-globe-vortex" />
+        <div className="hero-globe-inner-glow" />
+        <div className="hero-globe-sparkles" />
+        <div className="hero-globe-rings" />
         <div className="hero-horizon-line" />
         <div className="hero-secondary-curve" />
         <div className="hero-curved-glow" />

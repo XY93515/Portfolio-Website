@@ -3,16 +3,6 @@ import { motion } from 'framer-motion';
 import StarsCanvas from '../components/canvas/Stars';
 import '../main.css';
 
-const educationData = [
-  { year: '2020 - 2024', title: 'B.Tech - The LNM Institute Of Information And Technology', desc: 'CGPA - 8.09' },
-  { year: '2019 - 2020', title: 'Class 12 (CBSE) - Arorvansh Public School', desc: 'Percentage - 94%' },
-];
-
-const experienceData = [
-  { year: 'Present', title: 'Software Developer - EagleView', desc: 'Contributing in GIS-based applications by working with vector layers and tile rendering systems. Focused on building intuitive, user-centric features and optimizing backend processes to improve application performance, responsiveness, and overall user experience.' },
-  { year: 'Jan 2024 - July 2024', title: 'Software Developer Intern - EagleView', desc: 'Gained hands-on experience in building web applications using React, Redux, and Golang and also worked with various DevOps tools like Docker, and AWS to enhance performance and deployment efficiency.' },
-];
-
 export const About = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -45,11 +35,10 @@ export const About = () => {
         </h2>
       </motion.div>
       <div className="about-container">
-        {/* Left Side - About Me */}
-        <motion.div 
-          className="about-left"
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -30 }}
+        <motion.div
+          className="about-content-wrapper"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <div className="about-image-container">
@@ -57,72 +46,18 @@ export const About = () => {
           </div>
           <div className="about-content">
             <p className="about-text">
-            Enthusiastic full-stack developer dedicated to creating dynamic and meaningful web experiences. I thrive on solving problems across both frontend and backend with clean, efficient code. Always eager to learn and improve, I embrace every opportunity for growth. Beyond work, I love exploring new concepts and feeding my curiosity. I value balance in life and start each day driven to make a positive impact.
+              Enthusiastic full-stack developer dedicated to create dynamic and meaningful web experiences. I thrive on solving problems across both frontend and backend with clean, efficient code. Always eager to learn and improve, I embrace every opportunity for growth. Currently, I am expanding my boundaries by diving deep into Agentic AI, learning to build intelligent workflows that automate complex product operations. Beyond work, I love exploring new concepts and feeding my curiosity. I value balance in life and start each day driven to make a positive impact.
             </p>
             <div className="about-cta">
               <a
                 className="cv-download-btn"
-                href="/ParidhiGuptaResume.pdf"
-                download="ParidhiGuptaResume.pdf"
+                href="/resume_paridhi.pdf"
+                download="resume_paridhi.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Download CV <span className="btn-icon">↓</span>
               </a>
-            </div>
-          </div>
-        </motion.div>
-        {/* Vertical Separator */}
-        <div className="about-vertical-separator" />
-        {/* Right Side - Journey */}
-        <motion.div 
-          className="about-right"
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 30 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-        >
-          {/* Education Section */}
-          <div>
-            <h3 className="about-education-title">Education</h3>
-            <div className="about-education-list">
-              {educationData.map((item, idx) => (
-                <motion.div 
-                  key={idx}
-                  className="about-education-card"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                  transition={{ duration: 0.5, delay: 0.3 + idx * 0.2 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="about-education-card-header">
-                    <div className="about-education-title-text">{item.title}</div>
-                    <div className="about-education-year">{item.year}</div>
-                  </div>
-                  <div className="about-education-desc">{item.desc}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          {/* Experience Section */}
-          <div>
-            <h3 className="about-experience-title">Experience</h3>
-            <div className="about-experience-list">
-              {experienceData.map((item, idx) => (
-                <motion.div 
-                  key={idx}
-                  className="about-experience-card"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                  transition={{ duration: 0.5, delay: 0.5 + idx * 0.2 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <div className="about-experience-card-header">
-                    <div className="about-experience-title-text">{item.title}</div>
-                    <div className="about-experience-year">{item.year}</div>
-                  </div>
-                  <div className="about-experience-desc">{item.desc}</div>
-                </motion.div>
-              ))}
             </div>
           </div>
         </motion.div>

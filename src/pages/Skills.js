@@ -1,68 +1,72 @@
 import React from 'react';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import StarsCanvas from '../components/canvas/Stars';
 import '../main.css';
-import { SiGo, SiDjango, SiJavascript, SiMongodb } from 'react-icons/si';
+import {
+  SiGo, SiJavascript, SiMongodb, SiTypescript, SiReact, SiNextdotjs,
+  SiRedux, SiThreedotjs, SiFramer, SiWebpack, SiVite,
+  SiFastapi, SiPostgresql, SiSqlite, SiAmazon, SiGithub, SiGit
+} from 'react-icons/si';
 import { FaNodeJs, FaPython } from 'react-icons/fa';
 
 const skillIcons = {
-  'Javascript': <SiJavascript style={{ color: '#F7DF1E' }} />, // JS yellow
-  'React': '⚛️',
-  'Redux': '🔄',
-  'three.js': '🌐',
-  'Webpack/Gulp/Grunt': '🛠️',
-  'Golang': <SiGo style={{ color: '#00ADD8' }} />, // Go official blue
-  'Node.js': <FaNodeJs style={{ color: '#3C873A' }} />, // Node.js green
-  'Python/Django': <><FaPython style={{ color: '#3776AB', marginRight: 2 }} /><SiDjango style={{ color: '#092E20' }} /></>, // Python blue + Django green
-  'PostgresSQL/MySQL': '🗄️',
-  'MongoDB': <SiMongodb style={{ color: '#47A248' }} />, // MongoDB green
-  'AWS': '☁️',
+  'Javascript/TypeScript': <SiTypescript style={{ color: '#3178C6' }} />,
+  'React/Next.js': <SiReact style={{ color: '#61DAFB' }} />,
+  'Redux/Zustand/Context API': <SiRedux style={{ color: '#764ABC' }} />,
+  'three.js/Framer Motion': <SiThreedotjs style={{ color: '#FFFFFF' }} />,
+  'Webpack/Vite': <SiVite style={{ color: '#646CFF' }} />,
+  'Golang/Echo': <SiGo style={{ color: '#00ADD8' }} />,
+  'Python/FastAPI': <SiFastapi style={{ color: '#05998B' }} />,
+  'SQL': '📊',
+  'SQlite': <SiSqlite style={{ color: '#003B57' }} />,
+  'PostgresSQL': <SiPostgresql style={{ color: '#4169E1' }} />,
   'Agentic AI': '🤖',
-  'LLMs': '🧠',
-  'LangChain': '🔗',
-  'LangGraph': '📊',
+  'Systems Design': '🏗️',
+  'OOPS': '🧩',
+  'Git/GitHub': <SiGithub style={{ color: '#FFFFFF' }} />,
+  'AWS': <SiAmazon style={{ color: '#FF9900' }} />,
 };
 
 const skillsData = [
   {
     title: 'Frontend',
     icon: '💻',
-    iconBg: '#804dee',
+    iconBg: '#00c6ff',
     // cardBg: 'rgba(223, 197, 254, 0.8)',
-    titleColor: '#9b51e0',
+    titleColor: '#00c6ff',
     skills: [
-      { name: 'Javascript', percent: 95 },
-      { name: 'React', percent: 90 },
-      { name: 'Redux', percent: 80},
-      { name: 'three.js', percent: 80},
-      { name: 'Webpack/Gulp/Grunt', percent: 85 },
+      { name: 'Javascript/TypeScript', percent: 95 },
+      { name: 'React/Next.js', percent: 90 },
+      { name: 'Redux/Zustand/Context API', percent: 80 },
+      { name: 'three.js/Framer Motion', percent: 80 },
+      { name: 'Webpack/Vite', percent: 85 },
     ],
   },
   {
     title: 'Backend',
     icon: '🗄️',
-    iconBg: '#804dee',
+    iconBg: '#00c6ff',
     // cardBg: 'rgba(230, 220, 250, 0.08)',
-    titleColor: '#9b51e0',
+    titleColor: '#00c6ff',
     skills: [
-      { name: 'Golang', percent: 80 },
-      { name: 'Node.js', percent: 85},
-      { name: 'Python/Django', percent: 70},
-      { name: 'PostgresSQL/MySQL', percent: 80 },
-      { name: 'MongoDB', percent: 80 },
+      { name: 'Golang/Echo', percent: 80 },
+      { name: 'Python/FastAPI', percent: 70 },
+      { name: 'SQL', percent: 70 },
+      { name: 'SQlite', percent: 70 },
+      { name: 'PostgresSQL', percent: 70 },
     ],
   },
   {
     title: 'Others',
     icon: '🤖',
-    iconBg: '#804dee',
+    iconBg: '#00c6ff',
     // cardBg: 'rgba(230, 220, 250, 0.08)',
-    titleColor: '#9b51e0',
+    titleColor: '#00c6ff',
     skills: [
-      { name: 'Agentic AI', percent: 90 },
-      { name: 'LLMs', percent: 80 },
-      { name: 'LangChain', percent: 80 },
-      { name: 'LangGraph', percent: 80 },
+      { name: 'Agentic AI', percent: 70 },
+      { name: 'Systems Design', percent: 85 },
+      { name: 'OOPS', percent: 90 },
+      { name: 'Git/GitHub', percent: 90 },
       { name: 'AWS', percent: 70 },
     ],
   },
@@ -103,7 +107,7 @@ export const Skills = () => {
       <h2 className="about-heading" style={{ marginBottom: '4rem' }}>
         Skills <span className="purple-text">Overview</span>
       </h2>
-      <div className="skills-categories wide" style={{ marginTop: '2rem' }}>
+      <div className="skills-categories wide" style={{ marginTop: '8rem' }}>
         {skillsData.map((category, idx) => (
           <motion.div
             className="skills-category-card wide"
@@ -111,18 +115,18 @@ export const Skills = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 + idx * 0.1 }}
-            style={{ 
-              background: 'rgba(223, 197, 254, 0.15)',
+            style={{
+              background: `${category.iconBg}15`,
               backdropFilter: 'blur(12px)',
-              boxShadow: '0 8px 32px rgba(223, 197, 254, 0.25)',
-              border: '1.5px solid #804dee',
+              boxShadow: `0 8px 32px ${category.iconBg}30`,
+              border: `1.5px solid ${category.iconBg}80`,
             }}
           >
             <div className="skills-category-icon-circle overlap" style={{ background: category.iconBg }}>
               <span className="skills-category-icon">{category.icon}</span>
             </div>
-            <h3 className="skills-category-title" style={{ 
-              color: 'white', 
+            <h3 className="skills-category-title" style={{
+              color: 'white',
               fontWeight: '700',
               marginBottom: '2rem',
               WebkitTextFillColor: 'white'
